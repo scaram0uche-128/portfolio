@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.black-text {
+    color: black;
+}
+
+/* -------header------ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+}
+
+#header {
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background: url(last_of_us_2.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.container {
+    padding: 10px 10%;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 22px;
+}
+
+nav ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.centered {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lastofus {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+#welcome {
+    margin-top: 10vh;
+    justify-content: left;
+}
+
+#survive {
+    display: flex;
+    justify-content: end;
+    margin-top: 10vh;
+}
+
+.container h3 {
+    margin-top: 18vh;
+}
+
+/* -------about--------- */
+
+.ai-section {
+    position: relative;
+    background-color: #010409;
+    background-image: 
+      radial-gradient(#ffffff11 1px, transparent 1px),
+      radial-gradient(#ffffff11 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.glow-top, 
+.glow-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 0;
+}
+
+.glow-top {
+    top: 0;
+    background: linear-gradient(to bottom, #fff, #00ffbf44, transparent);
+}
+
+.glow-bottom {
+    bottom: 0;
+    background: linear-gradient(to top, #00d5ff44, transparent);
+}
+
+.ai-section .content {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.ai-section h2 {
+    color: #00FF88;
+    font-weight: 400;
+}
+
+.ai-section h2 span {
+    font-weight: bold;
+    color: #00FF88;
+}
+
+.ai-section p {
+    font-size: 1.1rem;
+    width: 100%;
+    margin-top: 1em;
+    color: #f0f0f0;
+}
+
+.ai-section p.subtle {
+    color: #666;
+    margin-top: 2em;
+}
+
+/* -----------Favorites----------- */
+
+#favs {
+    padding: 50px;
+}
+
+#favs span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+}
+
+#my-fav {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+/* =====Animation===== */
+
+.auto-scroll-gallery {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    background: #fff;
+}
+
+.scroll-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 30s linear infinite;
+    width: max-content; /* Prevents wrapping */
+}
+
+.scroll-track img {
+    height: 260px;
+    width: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-track img:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+.auto-scroll-gallery:hover .scroll-track {
+    animation-play-state: paused;
+}
